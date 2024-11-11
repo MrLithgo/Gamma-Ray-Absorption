@@ -400,7 +400,7 @@ if (photon.x >= leadX && !photon.hasPassedLead) {
   const selectedMaterial = materialSelect.value;  
    
   const attenuationCoefficient = materials[selectedMaterial].attenuationCoefficient; 
-   const probability = 0.6*Math.exp(-attenuationCoefficient * leadThickness);  
+   const probability = 0.4*Math.exp(-attenuationCoefficient * leadThickness);  
   
   const randN = Math.random();
   
