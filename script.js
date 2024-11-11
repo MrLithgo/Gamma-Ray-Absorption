@@ -267,7 +267,7 @@ function updateCount() {
   const attenuationCoefficient = materials[selectedMaterial].attenuationCoefficient;
    
    const sourceCount = 6 * Math.exp(-attenuationCoefficient * thickness); 
-   const backgroundCount = Math.random() * 0.6;   
+   const backgroundCount = Math.random() * 0.06;   
    cumulativeCount += sourceCount + backgroundCount;  
    countInput.value = Math.floor(cumulativeCount).toString(); 
   }  
@@ -400,7 +400,7 @@ if (photon.x >= leadX && !photon.hasPassedLead) {
   const selectedMaterial = materialSelect.value;  
    
   const attenuationCoefficient = materials[selectedMaterial].attenuationCoefficient; 
-   const probability = Math.exp(-attenuationCoefficient * leadThickness);  
+   const probability = 0.6*Math.exp(-attenuationCoefficient * leadThickness);  
   
   const randN = Math.random();
   
