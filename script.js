@@ -327,7 +327,7 @@ function animateGammaPhotons(time) {
 
   if (addSourceButton.textContent === 'Remove Source') {  
     
-   if (Math.random() < 0.1) {  
+   if (Math.random() < 0.2) {  
     const photon = {  
       x: canvas.width * 0.5 - 90, 
       
@@ -396,7 +396,7 @@ ctx.restore();
 const leadX = canvas.width * 0.5-20;  
 const timeToReachLead = (leadX - photon.x) / photon.vx;  
 if (photon.x >= leadX && !photon.hasPassedLead) { 
-   const leadThickness = parseInt(document.getElementById('thickness').value)*0.01+0.001; 
+   const leadThickness = parseInt(document.getElementById('thickness').value)*0.05+0.0001; 
   const selectedMaterial = materialSelect.value;  
    
   const attenuationCoefficient = materials[selectedMaterial].attenuationCoefficient; 
